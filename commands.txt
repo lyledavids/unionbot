@@ -1,0 +1,30 @@
+
+/help
+/remove-channel
+/set_up_sales_bot
+/stop-collection-sales-feed
+
+/set_up_info_bot
+/volume
+/floor-price
+/last_trades
+/info-feed-help
+
+sdk.getFloorPrice({contractAddress: address, apiKey: 'lmoo1JmW14tiqw611svxqVIY-56q5y-P'})
+        .then(res => {
+            result1 = res.openSea.floorPrice
+            result2 = res.looksRare.floorPrice
+
+            if (result1 == undefined) {
+                interaction.reply({
+                    content: `floorprice is ${result2} ETH on LooksRare`
+                })
+            } else if (result2 == undefined) {
+                interaction.reply({
+                    content: `floorprice is ${result1} ETH on OpenSea`
+                })
+            } else {
+                interaction.reply({
+                    content: `Not able to get floorprice for this collection`
+                })
+            }

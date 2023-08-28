@@ -1,0 +1,23 @@
+{
+  "name": "union-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "discord.js": "13.2.0",
+    "dotenv": "^16.0.1",
+    "ethers": "^6.7.1",
+    "node-fetch": "2.6.6",
+    "ws": "^8.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
